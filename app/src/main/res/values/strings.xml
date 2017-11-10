@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">SvenUitendaalpset2</string>
     <string name="title_activity_main2">Main2Activity</string>
-    <string name="introtext">Introtext</string>
+    <string name="introtext">In this app I will ask you to give some words.
+        When you filled in all of the words I will make a story with these words. Enjoy!</string>
 </resources>

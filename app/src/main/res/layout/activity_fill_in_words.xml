@@ -5,62 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.svenu.svenuitendaalpset2.FillInWords"
-    tools:showIn="@layout/activity_fill_in_words">
+    tools:context="com.example.svenu.svenuitendaalpset2.FillInWords">
+    <!--tools:showIn="@layout/activity_fill_in_words">-->
 
-    <LinearLayout
-        android:layout_width="344dp"
-        android:layout_height="551dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="8dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="8dp">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Fill in the words to complete the story!"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/counter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="n word(s) left"
-            android:textAlignment="center" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical" >
 
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fill in the words to complete the story!"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/counter"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="Word" />
+                android:text=""
+                android:textAlignment="center" />
 
-            <Button
-                android:id="@+id/ok"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint=""
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:id="@+id/ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="submitWord"
+                    android:text="Ok" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/wordtype"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Ok"
-                android:onClick="submitWord" />
+                android:text=""
+                android:textAlignment="center" />
 
         </LinearLayout>
+    </ScrollView>
 
-        <TextView
-            android:id="@+id/wordtype"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Please type a/an word"
-            android:textAlignment="center" />
-
-    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

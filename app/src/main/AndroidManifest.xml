@@ -16,10 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".FillInWords"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".FillInWords"></activity>
+        <activity android:name=".ShowStory"></activity>
     </application>
 
 </manifest>
