@@ -146,7 +146,8 @@ public class FillInWords extends AppCompatActivity {
     public void submitWord(View view) {
         String new_word = editText.getText().toString();
         if (!new_word.equals("")) {
-            story.fillInPlaceholder(new_word);
+            String word = "<font color=#000080><b>" + new_word + "</b></font>";
+            story.fillInPlaceholder(word);
             editText.setText("");
         }
         else {

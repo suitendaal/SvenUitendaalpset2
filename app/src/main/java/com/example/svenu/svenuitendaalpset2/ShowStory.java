@@ -3,6 +3,7 @@ package com.example.svenu.svenuitendaalpset2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 
@@ -20,7 +21,7 @@ public class ShowStory extends AppCompatActivity {
         TextView story = (TextView)findViewById(R.id.story);
         TextView title = (TextView)findViewById(R.id.title) ;
         title.setText(titletext);
-        story.setText(storytext);
+        story.setText(Html.fromHtml(storytext));
     }
 
     public void chooseNew(View view) {
